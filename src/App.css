@@ -1,0 +1,293 @@
+/* General Styles */
+body, html, .app {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  background-attachment: fixed; /* Makes the background stay fixed while scrolling */
+  color: #333;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-link.active {
+  color: #00bcd4;
+  border-bottom: 2px solid #00bcd4;
+}
+
+.nav-link:hover {
+  color: #00bcd4;
+}
+
+.login {
+  background: #00bcd4;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.login:hover {
+  background: #0199a8;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-size: cover; /* Ensure the background image covers the entire section */
+  background-position: center; /* Center the background image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Required for pseudo-element positioning */
+  padding: 2rem 5%;
+  gap: 3rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
+}
+
+.text {
+  text-align: left; /* Align text to the left */
+  margin-left: 2rem; /* Add some spacing from the left edge */
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #e0f7fa;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+  color: #ffffff;
+}
+
+.description {
+  font-size: 1rem;
+  margin: 1rem 0;
+  color: #e0f7fa;
+}
+
+.preorder {
+  background: #00bcd4;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.preorder:hover {
+  background: #0199a8;
+}
+
+.bike {
+  text-align: center;
+}
+
+.bike-image {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.specs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.spec {
+  text-align: center;
+}
+
+.spec-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+.spec-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Navigation Dots */
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #00bcd4;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #aaa;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background: #00bcd4;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 25%;
+  background: linear-gradient(to bottom, #00bcd4, #0199a8);
+  color: white;
+  padding: 1rem;
+  writing-mode: vertical-lr;
+  text-align: center;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-text {
+  margin: 0.5rem 0;
+}
+
+/* Add a new section for the scooter photo and specifications */
+.scooter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 5%;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.scooter-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.scooter-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.scooter-specs {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 1rem;
+}
+
+.scooter-spec {
+  text-align: center;
+}
+
+.scooter-spec-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+.scooter-spec-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footer a {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #0199a8;
+}
